@@ -317,6 +317,9 @@ class WorldComposer:
             self.layered_world_mesh.append({"type": "bg", "mesh": no_fg_img_mesh})
 
     def _compose_foreground_layer(self):
+        if self.fg_status == "no_fg":
+            return
+
         print(f"🧩 Composing the foreground layers...")
 
         # Obtain the list of foreground layers
@@ -336,8 +339,6 @@ class WorldComposer:
             fg_layer_list.append(
                 [self.no_fg1_img, self.fg2_mask, self.fg2_bbox, "fg2"]
             )  # fg2 mesh
-        elif self.fg_status == "no_fg":
-            pass
 
         # Determine whether to generate foreground objects or directly project foreground layers
         project_object_layer = ["fg1", "fg2"]
@@ -482,7 +483,7 @@ class WorldComposer:
                     max_scene_depth = torch.max(max_scene_depth, layer_depth.max())
 
             # Set the sky depth to be slightly greater than the maximum scene depth.
-            sky_distance = self.sky_depth_margin * max_scene_depth
+            sky_distance = self.sky_depth_margin * max_scene_depth if max_scene_depth > 0 else 3.0
 
             sky_pred = {
                 "rgb": self.sky_img,
