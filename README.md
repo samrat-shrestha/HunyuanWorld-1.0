@@ -28,7 +28,7 @@
 https://github.com/user-attachments/assets/513c9529-2b34-4872-b38f-4f291f3ae1c7
 
 ## 🔥 News
-- July 26, 2025: 👋 We present the technical report of HunyuanWorld-1.0, please check out the details and spark some discussion!
+- July 26, 2025: 👋 We present the [technical report](https://3d-models.hunyuan.tencent.com/world/HY_World_1_technical_report.pdf) of HunyuanWorld-1.0, please check out the details and spark some discussion!
 - July 26, 2025: 🤗 We release the first open-source, simulation-capable, immersive 3D world generation model, HunyuanWorld-1.0!
 
 > Join our **[Wechat](#)** and **[Discord](https://discord.gg/dNBrdrGGMa)** group to discuss and find help from us.
