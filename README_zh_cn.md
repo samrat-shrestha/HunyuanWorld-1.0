@@ -28,7 +28,7 @@
 https://github.com/user-attachments/assets/4745e6b5-18b5-45be-bd0c-cca3e390c0ad
 
 ## 🔥 最新消息
-- July 26, 2025: 👋 我们开源了HunyuanWorld-1.0的技术报告, 欢迎阅读并与我们一起讨论!
+- July 26, 2025: 👋 我们开源了HunyuanWorld-1.0的[技术报告](https://3d-models.hunyuan.tencent.com/world/HY_World_1_technical_report.pdf), 欢迎阅读并与我们一起讨论!
 - July 26, 2025: 🤗 我们发布了第一个开源、可仿真、沉浸式的3D世界生成模型, HunyuanWorld-1.0!
 
  微信群 and Discord 社区 
