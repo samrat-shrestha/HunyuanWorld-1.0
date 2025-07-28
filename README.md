@@ -25,7 +25,7 @@
   "To see a World in a Grain of Sand, and a Heaven in a Wild Flower"
 </p>
 
-https://github.com/user-attachments/assets/513c9529-2b34-4872-b38f-4f291f3ae1c7
+https://github.com/user-attachments/assets/747b3e41-df9c-4cd2-b1d1-c0dce63f63ef
 
 ## 🔥 News
 - July 26, 2025: 👋 We present the [technical report](https://3d-models.hunyuan.tencent.com/world/HY_World_1_technical_report.pdf) of HunyuanWorld-1.0, please check out the details and spark some discussion!
