@@ -17,7 +17,7 @@ import open3d as o3d
 
 import argparse
 
-# hunyuan3d sence generation
+# hunyuan3d scene generation
 from hy3dworld import LayerDecomposition
 from hy3dworld import WorldComposer, process_file
 
@@ -96,7 +96,7 @@ if __name__ == "__main__":
     parser.add_argument("--labels_fg2", nargs='+', default=[],
                         help="Labels for foreground objects in layer 2")
     parser.add_argument("--classes", type=str, default="outdoor",
-                        help="Classes for sence generation")
+                        help="Classes for scene generation")
     parser.add_argument("--seed", type=int, default=42,
                         help="Random seed for reproducibility")
     parser.add_argument("--output_path", type=str, default="results",
