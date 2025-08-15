@@ -29,6 +29,7 @@
 https://github.com/user-attachments/assets/747b3e41-df9c-4cd2-b1d1-c0dce63f63ef
 
 ## 🔥 News
+- August 15, 2025: 🤗 We release the quantization version of HunyuanWorld-1.0 (HunyuanWorld-1.0-lite), which now supports running on Consumer-grade GPUs such as 4090!
 - July 26, 2025: 👋 We present the [technical report](https://arxiv.org/abs/2507.21809) of HunyuanWorld-1.0, please check out the details and spark some discussion!
 - July 26, 2025: 🤗 We release the first open-source, simulation-capable, immersive 3D world generation model, HunyuanWorld-1.0!
 
@@ -166,12 +167,21 @@ huggingface-cli login --token $HUGGINGFACE_TOKEN
 ### Code Usage
 For Image to World generation, you can use the following code:
 ```python
-# First, generate a Panorama image with  An Image.
+# First, generate a Panorama image with An Image.
 python3 demo_panogen.py --prompt "" --image_path examples/case2/input.png --output_path test_results/case2
+# To optimize memory usage and speed up inference, quantization is a practical solution.
+python3 demo_panogen.py --prompt "" --image_path examples/case2/input.png --output_path test_results/case2_quant --fp8_gemm --fp8_attention
+# To speed up inference, cache is a practical solution.
+python3 demo_panogen.py --prompt "" --image_path examples/case2/input.png --output_path test_results/case2_cache --cache
 # Second, using this Panorama image, to create a World Scene with HunyuanWorld 1.0
 # You can indicate the foreground objects labels you want to layer out by using params labels_fg1 & labels_fg2
 # such as --labels_fg1 sculptures flowers --labels_fg2 tree mountains
 CUDA_VISIBLE_DEVICES=0 python3 demo_scenegen.py --image_path test_results/case2/panorama.png --labels_fg1 stones --labels_fg2 trees --classes outdoor --output_path test_results/case2
+# To optimize memory usage and speed up inference, quantization is a practical solution.
+CUDA_VISIBLE_DEVICES=0 python3 demo_scenegen.py --image_path test_results/case2_quant/panorama.png --labels_fg1 stones --labels_fg2 trees  --classes outdoor --output_path test_results/case2_quant --fp8_gemm --fp8_attention
+# To speed up inference, cache is a practical solution.
+CUDA_VISIBLE_DEVICES=0 python3 demo_scenegen.py --image_path test_results/case2_cache/panorama.png --labels_fg1 stones --labels_fg2 trees  --classes outdoor --output_path test_results/case2_cache --cache
+# To speed up inference, cache is a practical solution.
 # And then you get your WORLD SCENE!!
 ```
 
@@ -179,10 +189,18 @@ For Text to World generation, you can use the following code:
 ```python
 # First, generate a Panorama image with A Prompt.
 python3 demo_panogen.py --prompt "At the moment of glacier collapse, giant ice walls collapse and create waves, with no wildlife, captured in a disaster documentary" --output_path test_results/case7
+# To optimize memory usage and speed up inference, quantization is a practical solution.
+python3 demo_panogen.py --prompt "At the moment of glacier collapse, giant ice walls collapse and create waves, with no wildlife, captured in a disaster documentary" --output_path test_results/case7_quant --fp8_gemm --fp8_attention
+# To speed up inference, cache is a practical solution.
+python3 demo_panogen.py --prompt "At the moment of glacier collapse, giant ice walls collapse and create waves, with no wildlife, captured in a disaster documentary" --output_path test_results/case7_cache --cache
 # Second, using this Panorama image, to create a World Scene with HunyuanWorld 1.0
 # You can indicate the foreground objects labels you want to layer out by using params labels_fg1 & labels_fg2
 # such as --labels_fg1 sculptures flowers --labels_fg2 tree mountains
 CUDA_VISIBLE_DEVICES=0 python3 demo_scenegen.py --image_path test_results/case7/panorama.png --classes outdoor --output_path test_results/case7
+# To optimize memory usage and speed up inference, quantization is a practical solution.
+CUDA_VISIBLE_DEVICES=0 python3 demo_scenegen.py --image_path test_results/case7_quant/panorama.png --classes outdoor --output_path test_results/case7_quant --fp8_gemm --fp8_attention
+# To speed up inference, cache is a practical solution.
+CUDA_VISIBLE_DEVICES=0 python3 demo_scenegen.py --image_path test_results/case7_cache/panorama.png --classes outdoor --output_path test_results/case7_cache --cache
 # And then you get your WORLD SCENE!!
 ```
 

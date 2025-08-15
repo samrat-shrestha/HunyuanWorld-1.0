@@ -37,6 +37,8 @@ def depth_match(init_pred: dict, bg_pred: dict, mask: np.ndarray, quantile: floa
         bg_pred (dict): Background depth prediction with adjusted "distance" key.
     """
     valid_mask = mask > 0
+    if valid_mask.sum() == 0:
+        return bg_pred  # No valid pixels to match
     init_distance = init_pred["distance"][valid_mask]
     bg_distance = bg_pred["distance"][valid_mask]
 
