@@ -239,8 +239,8 @@ Due to hardware limitations, certain scenes may fail to load.
 - [x] Inference Code
 - [x] Model Checkpoints
 - [x] Technical Report
-- [ ] TensorRT Version
-- [ ] RGBD Video Diffusion
+- [x] Lite Version
+- [ ] Voyager (RGBD Video Diffusion)
 
 ## 🔗 BibTeX
 ```
