@@ -237,8 +237,8 @@ bash scripts/test.sh
 - [x] Inference Code
 - [x] Model Checkpoints
 - [x] Technical Report
-- [ ] TensorRT Version
-- [ ] RGBD Video Diffusion
+- [x] Lite Version
+- [ ] Voyager (RGBD Video Diffusion)
 
 ## 🔗 BibTeX
 ```
