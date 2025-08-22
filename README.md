@@ -246,7 +246,7 @@ Due to hardware limitations, certain scenes may fail to load.
 ```
 @misc{hunyuanworld2025tencent,
     title={HunyuanWorld 1.0: Generating Immersive, Explorable, and Interactive 3D Worlds from Words or Pixels},
-    author={Tencent HunyuanWorld Team},
+    author={Tencent, HunyuanWorld Team},
     year={2025},
     eprint={2507.21809},
     archivePrefix={arXiv},
