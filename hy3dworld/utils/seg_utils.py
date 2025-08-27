@@ -368,7 +368,7 @@ def get_fg_pad(
     image = cv2.imread(IMG_PATH, cv2.IMREAD_UNCHANGED)
     pad_len = image.shape[1] // 2
     image = cv2.copyMakeBorder(image, 0, 0, pad_len, 0, cv2.BORDER_WRAP)
-    image = Image.fromarray(image).convert("RGB")
+    image = Image.fromarray(cv2.cvtColor(image, cv2.COLOR_BGR2RGB)).convert("RGB")
 
     # Process super-resolution image
     image_sr = Image.open(IMG_SR_PATH)

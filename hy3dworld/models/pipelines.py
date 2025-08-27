@@ -1158,9 +1158,6 @@ class FluxBasePipeline(DiffusionPipeline):
 
                 # Apply true CFG if enabled
                 if do_true_cfg:
-                    if not is_inpainting and negative_image_embeds is not None:
-                        self._joint_attention_kwargs["ip_adapter_image_embeds"] = negative_image_embeds
-                    
                     neg_noise_pred = self._predict_noise(
                         latents, timestep, guidance, negative_pooled_prompt_embeds,
                         negative_prompt_embeds, text_ids, latent_image_ids,
