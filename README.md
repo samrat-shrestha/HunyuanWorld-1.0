@@ -29,6 +29,7 @@
 https://github.com/user-attachments/assets/747b3e41-df9c-4cd2-b1d1-c0dce63f63ef
 
 ## 🔥 News
+- September 2, 2025: 🤗 We release our RGB-D Video Diffusion model  [HunyuanWorld-Voyager](https://github.com/Tencent-Hunyuan/HunyuanWorld-Voyager/), which supports 3D-consistency world exploration and fast 3D reconstruction!
 - August 15, 2025: 🤗 We release the quantization version of HunyuanWorld-1.0 (HunyuanWorld-1.0-lite), which now supports running on Consumer-grade GPUs such as 4090!
 - July 26, 2025: 👋 We present the [technical report](https://arxiv.org/abs/2507.21809) of HunyuanWorld-1.0, please check out the details and spark some discussion!
 - July 26, 2025: 🤗 We release the first open-source, simulation-capable, immersive 3D world generation model, HunyuanWorld-1.0!
@@ -240,7 +241,7 @@ Due to hardware limitations, certain scenes may fail to load.
 - [x] Model Checkpoints
 - [x] Technical Report
 - [x] Lite Version
-- [ ] Voyager (RGBD Video Diffusion)
+- [x] Voyager (RGBD Video Diffusion)
 
 ## 🔗 BibTeX
 ```
