@@ -29,6 +29,7 @@
 https://github.com/user-attachments/assets/4745e6b5-18b5-45be-bd0c-cca3e390c0ad
 
 ## 🔥 最新消息
+- September 2, 2025: 🤗 我们更新了RGB-D视频漫游模型[HunyuanWorld-Voyager](https://github.com/Tencent-Hunyuan/HunyuanWorld-Voyager/)，支持3D空间一致的世界漫游以及实时3D重建！
 - August 15, 2025: 🤗 我们更新了HunyuanWorld-1.0的量化版本 (HunyuanWorld-1.0-lite)，现在支持在4090等消费级显卡上运行！
 - July 26, 2025: 👋 我们开源了HunyuanWorld-1.0的[技术报告](https://arxiv.org/abs/2507.21809), 欢迎阅读并与我们一起讨论!
 - July 26, 2025: 🤗 我们发布了第一个开源、可仿真、沉浸式的3D世界生成模型, HunyuanWorld-1.0!
@@ -238,7 +239,7 @@ bash scripts/test.sh
 - [x] Model Checkpoints
 - [x] Technical Report
 - [x] Lite Version
-- [ ] Voyager (RGBD Video Diffusion)
+- [x] Voyager (RGBD Video Diffusion)
 
 ## 🔗 BibTeX
 ```
