@@ -245,13 +245,11 @@ Due to hardware limitations, certain scenes may fail to load.
 
 ## 🔗 BibTeX
 ```
-@misc{hunyuanworld2025tencent,
+@article{hunyuanworld2025tencent,
     title={HunyuanWorld 1.0: Generating Immersive, Explorable, and Interactive 3D Worlds from Words or Pixels},
-    author={Tencent, HunyuanWorld Team},
+    author={Team HunyuanWorld},
     year={2025},
-    eprint={2507.21809},
-    archivePrefix={arXiv},
-    primaryClass={cs.CV}
+    journal={arXiv preprint}
 }
 ```
 
