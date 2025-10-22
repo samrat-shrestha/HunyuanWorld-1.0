@@ -29,6 +29,7 @@
 https://github.com/user-attachments/assets/747b3e41-df9c-4cd2-b1d1-c0dce63f63ef
 
 ## 🔥 News
+- October 22, 2025: 🤗 We release [HunyuanWorld-1.1 (WorldMirror)](https://github.com/Tencent-Hunyuan/HunyuanWorld-Mirror), supporting 3D world creation from videos or multi-view images!
 - October 16, 2025: 🤗 We recently propose  [FlashWorld](https://github.com/imlixinyang/FlashWorld), enabling 3DGS world generation in 5~10 seconds on a single GPU!
 - September 2, 2025: 🤗 We release our RGB-D Video Diffusion model  [HunyuanWorld-Voyager](https://github.com/Tencent-Hunyuan/HunyuanWorld-Voyager/), which supports 3D-consistency world exploration and fast 3D reconstruction!
 - August 15, 2025: 🤗 We release the quantization version of HunyuanWorld-1.0 (HunyuanWorld-1.0-lite), which now supports running on Consumer-grade GPUs such as 4090!
