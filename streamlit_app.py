@@ -52,7 +52,7 @@ if st.button("🎨 Generate Panorama", type="primary", disabled=st.session_state
     
     # Run panorama generation
     cmd = f"""
-    source ~/.bashrc && \
+    source ~/miniconda3/etc/profile.d/conda.sh && \
     conda activate HunyuanWorld && \
     cd {SCRIPT_DIR} && \
     CUDA_VISIBLE_DEVICES=1 python3 demo_panogen.py \
@@ -140,7 +140,7 @@ if st.session_state.panorama_generated and st.session_state.panorama_path:
         
         # Run scene generation
         cmd = f"""
-        source ~/.bashrc && \
+        source ~/miniconda3/etc/profile.d/conda.sh && \
         conda activate HunyuanWorld && \
         cd {SCRIPT_DIR} && \
         CUDA_VISIBLE_DEVICES=1 python3 demo_scenegen.py \
