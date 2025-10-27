@@ -7,6 +7,9 @@ from pathlib import Path
 # Page config
 st.set_page_config(page_title="HunyuanWorld Generator", page_icon="🎨", layout="wide")
 
+# Get the directory where this script is located
+SCRIPT_DIR = Path(__file__).parent.resolve()
+
 # Initialize session state
 if 'panorama_generated' not in st.session_state:
     st.session_state.panorama_generated = False
@@ -34,7 +37,7 @@ with col2:
     output_name = st.text_input("Output name:", value="case1")
 
 if st.button("🎨 Generate Panorama", type="primary", disabled=st.session_state.panorama_generated):
-    output_dir = f"test_results/{output_name}"
+    output_dir = str(SCRIPT_DIR / f"test_results/{output_name}")
     
     # Create output directory
     Path(output_dir).mkdir(parents=True, exist_ok=True)
@@ -51,6 +54,7 @@ if st.button("🎨 Generate Panorama", type="primary", disabled=st.session_state
     cmd = f"""
     source ~/.bashrc && \
     conda activate HunyuanWorld && \
+    cd {SCRIPT_DIR} && \
     CUDA_VISIBLE_DEVICES=1 python3 demo_panogen.py \
         --prompt "{escaped_prompt}" \
         --output_path {output_dir}
@@ -138,6 +142,7 @@ if st.session_state.panorama_generated and st.session_state.panorama_path:
         cmd = f"""
         source ~/.bashrc && \
         conda activate HunyuanWorld && \
+        cd {SCRIPT_DIR} && \
         CUDA_VISIBLE_DEVICES=1 python3 demo_scenegen.py \
             --image_path {st.session_state.panorama_path} \
             --classes {classes} \
