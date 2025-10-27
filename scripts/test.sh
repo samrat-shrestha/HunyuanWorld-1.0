@@ -7,8 +7,8 @@ CUDA_VISIBLE_DEVICES=0 python3 demo_scenegen.py --image_path test_results/case2/
 CUDA_VISIBLE_DEVICES=0 python3 demo_panogen.py --prompt "" --image_path examples/case3/input.png --output_path test_results/case3
 CUDA_VISIBLE_DEVICES=0 python3 demo_scenegen.py --image_path test_results/case3/panorama.png --classes outdoor --output_path test_results/case3
 
-CUDA_VISIBLE_DEVICES=0 python3 demo_panogen.py --prompt "There is a rocky island on the vast sea surface, with a triangular rock burning red flames in the center of the island. The sea is open and rough, with a green surface. Surrounded by towering peaks in the distance." --output_path test_results/case4
-CUDA_VISIBLE_DEVICES=0 python3 demo_scenegen.py --image_path test_results/case4/panorama.png --classes outdoor --output_path test_results/case4
+CUDA_VISIBLE_DEVICES=1 python3 demo_panogen.py --prompt "There is a rocky island on the vast sea surface, with a triangular rock burning red flames in the center of the island. The sea is open and rough, with a green surface. Surrounded by towering peaks in the distance." --output_path test_results/case4
+CUDA_VISIBLE_DEVICES=1 python3 demo_scenegen.py --image_path test_results/case4/panorama.png --classes outdoor --output_path test_results/case4
 
 CUDA_VISIBLE_DEVICES=0 python3 demo_panogen.py --prompt "" --image_path examples/case5/input.png --output_path test_results/case5
 CUDA_VISIBLE_DEVICES=0 python3 demo_scenegen.py --image_path test_results/case5/panorama.png --classes outdoor --output_path test_results/case5
